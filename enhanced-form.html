@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mama Mboga Stand</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        header, footer {
+            text-align: center;
+            background: #8fa31c;
+            padding: 15px;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        table, th, td {
+            border: 1px solid #555;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        img {
+            width: 120px;
+            height: auto;
+            border-radius: 8px;
+        }
+        fieldset {
+            border: 1px solid #999;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin: 8px 0 4px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Mama Mboga Stand</h1>
+    <p>Fresh fruits and vegetables every day!</p>
+</header>
+
+<main>
+
+    <!-- Fruits Section -->
+    <section>
+        <h2>Our Fruits</h2>
+        <ul>
+            <li>Mango</li>
+            <li>Banana</li>
+            <li>Orange</li>
+            <li>Apple</li>
+            <li>Pineapple</li>
+            <li>Watermelon</li>
+            <li>Pawpaw</li>
+            <li>Strawberry</li>
+            <li>Grapes</li>
+            <li>Avocado</li>
+        </ul>
+        <img src="fruits.jpeg" alt="A basket of fresh fruits">
+    </section>
+
+    <!-- Vegetables Section -->
+    <section>
+        <h2>Our Vegetables</h2>
+        <ol>
+            <li>Kale</li>
+            <li>Spinach</li>
+            <li>Cabbage</li>
+            <li>Tomato</li>
+            <li>Onion</li>
+            <li>Carrot</li>
+            <li>Green Pepper</li>
+            <li>Eggplant</li>
+            <li>Cucumber</li>
+            <li>Okra</li>
+        </ol>
+        <img src="imagess/vegetables.jpeg" alt="A bunch of vegetables available">
+    </section>
+
+    <!-- Price Table -->
+    <section>
+        <h2>Price List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Type</th>
+                    <th>Price (KES)</th>
+                    <th>Availability</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Mango</td><td>Fruit</td><td>50</td><td>Available</td></tr>
+                <tr><td>Kale</td><td>Vegetable</td><td>20</td><td>Available</td></tr>
+                <tr><td>Apple</td><td>Fruit</td><td>40</td><td>Out of Stock</td></tr>
+                <tr><td>Tomato</td><td>Vegetable</td><td>30</td><td>Available</td></tr>
+                <tr><td>Banana</td><td>Fruit</td><td>10</td><td>Available</td></tr>
+                <tr><td>Cabbage</td><td>Vegetable</td><td>60</td><td>Available</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Order Form -->
+    <section>
+        <h2>Place Your Order</h2>
+        <form action="#" method="post">
+
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your full name" required minlength="3">
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="0712345678" required pattern="^07\d{8}$" title="Phone number should start with 07 and be 10 digits long">
+            </fieldset>
+
+            <fieldset>
+                <legend>Order Details</legend>
+                <label for="item">Select Item:</label>
+                <select id="item" name="item" required>
+                    <option value="">-- Choose an item --</option>
+                    <option value="mango">Mango</option>
+                    <option value="banana">Banana</option>
+                    <option value="kale">Kale</option>
+                    <option value="spinach">Spinach</option>
+                    <option value="tomato">Tomato</option>
+                </select>
+
+                <label for="quantity">Quantity (kg):</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="50" required>
+
+                <label for="delivery-date">Preferred Delivery Date:</label>
+                <input type="date" id="delivery-date" name="delivery-date" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Notes</legend>
+                <label for="notes">Special Instructions:</label>
+                <textarea id="notes" name="notes" rows="4" placeholder="Any special delivery instructions"></textarea>
+            </fieldset>
+
+            <input type="submit" value="Place Order">
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2025 Mama Mboga Stand | Freshness You Can Trust</p>
+</footer>
+
+</body>
+</html>
